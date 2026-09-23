@@ -1,0 +1,46 @@
+name: API CI Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Start access-request service
+        run: |
+          PORT=4000 DATA_PATH=./service/data/requests.json node service/access-request-api.js > service.log 2>&1 &
+          echo $! > service.pid
+
+      - name: Run API test suite
+        run: npm test
+
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-test-reports
+          path: reports/
+          if-no-files-found: warn
+
+      - name: Upload service log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: access-request-service-log
+          path: service.log
+          if-no-files-found: warn

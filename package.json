@@ -1,0 +1,22 @@
+{
+  "name": "access-request-qa-takehome",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/write-run-report.cjs",
+    "test:watch": "jest --watch",
+    "test:smoke": "node scripts/write-run-report.cjs tests/smoke",
+    "test:functional": "node scripts/write-run-report.cjs tests/functional",
+    "test:negative": "node scripts/write-run-report.cjs tests/negative-boundary",
+    "test:lifecycle": "node scripts/write-run-report.cjs tests/lifecycle",
+    "test:unit": "node scripts/write-run-report.cjs tests/unit",
+    "test:regression": "node scripts/write-run-report.cjs tests/smoke tests/functional tests/negative-boundary tests/lifecycle --testNamePattern=\"lists the documented default request page|gets a known request with its full source-record shape|returns the documented not-found contract for an unknown request|filters by exact risk flag SOD_CONFLICT|reports filtered totals and page metadata|clamps pageSize above 100 to 100|rejects invalid sortBy query value createdAt|requires a nonblank justification when denying|rejects a stale version and leaves the pending record unchanged|reports a stale bulk item and leaves it unchanged\""
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.0",
+    "jest": "^30.0.0",
+    "jest-junit": "^16.0.0",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.8.0"
+  }
+}

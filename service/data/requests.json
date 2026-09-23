@@ -1,0 +1,900 @@
+[
+  {
+    "requestId": "ar-20120",
+    "type": "GRANT",
+    "status": "APPROVED",
+    "priority": "NORMAL",
+    "requester": { "name": "Yusuf Ahmed", "department": "Data & Analytics", "manager": "V. Kaur" },
+    "resource": { "name": "DWH Analyst", "system": "Data-Warehouse", "type": "ROLE" },
+    "requesterJustification": "Month-end close reporting; existing read scope does not cover the finance marts.",
+    "riskFlags": ["DORMANT_90D"],
+    "requestedAt": "2026-09-01T08:15:00Z",
+    "dueDate": "2026-09-15",
+    "version": 2,
+    "decision": {
+      "outcome": "APPROVED",
+      "decidedBy": "V. Kaur",
+      "decidedAt": "2026-09-03T16:40:00Z",
+      "justification": "Dormancy reviewed with requester's manager; role is required for month-end close and is read-only."
+    },
+    "history": [
+      { "at": "2026-09-01T08:15:00Z", "event": "REQUESTED", "actor": "Yusuf Ahmed" },
+      { "at": "2026-09-03T16:40:00Z", "event": "DECIDED", "actor": "V. Kaur" }
+    ]
+  },
+  {
+    "requestId": "ar-20155",
+    "type": "REVOKE",
+    "status": "APPROVED",
+    "priority": "NORMAL",
+    "requester": { "name": "Compliance Bot", "department": "GRC", "manager": "—" },
+    "resource": { "name": "Salesforce Admin", "system": "Salesforce-Prod", "type": "ROLE" },
+    "requesterJustification": "Quarterly recertification: admin scope flagged for removal per least-privilege review.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-02T06:00:00Z",
+    "dueDate": "2026-09-16",
+    "version": 2,
+    "decision": {
+      "outcome": "APPROVED",
+      "decidedBy": "M. Smith",
+      "decidedAt": "2026-09-04T10:22:00Z",
+      "justification": "Confirmed with resource owner; admin scope removed, standard profile retained."
+    },
+    "history": [
+      { "at": "2026-09-02T06:00:00Z", "event": "REQUESTED", "actor": "Compliance Bot" },
+      { "at": "2026-09-04T10:22:00Z", "event": "DECIDED", "actor": "M. Smith" }
+    ]
+  },
+  {
+    "requestId": "ar-20302",
+    "type": "REVOKE",
+    "status": "APPROVED",
+    "priority": "LOW",
+    "requester": { "name": "Compliance Bot", "department": "GRC", "manager": "—" },
+    "resource": { "name": "Payroll Export", "system": "HRIS", "type": "APPLICATION" },
+    "requesterJustification": "Quarterly recertification: holder separated on 2026-08-30.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-05T08:00:00Z",
+    "dueDate": "2026-09-19",
+    "version": 2,
+    "decision": {
+      "outcome": "APPROVED",
+      "decidedBy": "M. Smith",
+      "decidedAt": "2026-09-06T11:31:00Z",
+      "justification": "Confirmed termination in HRIS; access revoked."
+    },
+    "history": [
+      { "at": "2026-09-05T08:00:00Z", "event": "REQUESTED", "actor": "Compliance Bot" },
+      { "at": "2026-09-06T11:31:00Z", "event": "DECIDED", "actor": "M. Smith" }
+    ]
+  },
+  {
+    "requestId": "ar-20198",
+    "type": "GRANT",
+    "status": "APPROVED",
+    "priority": "NORMAL",
+    "requester": { "name": "Elena Sokolova", "department": "Data & Analytics", "manager": "T. Ishikawa" },
+    "resource": { "name": "DWH Analyst", "system": "Data-Warehouse", "type": "ROLE" },
+    "requesterJustification": "Analytics backlog for Q4; need read access to the growth marts.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-04T09:30:00Z",
+    "dueDate": "2026-09-18",
+    "version": 2,
+    "decision": {
+      "outcome": "APPROVED",
+      "decidedBy": "V. Kaur",
+      "decidedAt": "2026-09-09T14:05:00Z",
+      "justification": "Approved; read-only scope matches the requesting team's charter."
+    },
+    "history": [
+      { "at": "2026-09-04T09:30:00Z", "event": "REQUESTED", "actor": "Elena Sokolova" },
+      { "at": "2026-09-09T14:05:00Z", "event": "DECIDED", "actor": "V. Kaur" }
+    ]
+  },
+  {
+    "requestId": "ar-20240",
+    "type": "GRANT",
+    "status": "APPROVED",
+    "priority": "HIGH",
+    "requester": { "name": "Tomás Rivera", "department": "IT Operations", "manager": "S. Patel" },
+    "resource": { "name": "Prod Deployment Approver", "system": "AWS-Provisioning", "type": "ENTITLEMENT" },
+    "requesterJustification": "Release 4.2 cutover weekend; secondary approver is out and the pipeline is blocked without a second approver.",
+    "riskFlags": ["PRIVILEGED_ACCESS"],
+    "requestedAt": "2026-09-07T11:12:00Z",
+    "dueDate": "2026-09-21",
+    "version": 2,
+    "decision": {
+      "outcome": "APPROVED",
+      "decidedBy": "S. Patel",
+      "decidedAt": "2026-09-12T09:47:00Z",
+      "justification": "Break-glass approval for the 4.2 cutover window only; auto-revoke scheduled for 2026-09-30 and change ticket CHG-88412 on file."
+    },
+    "history": [
+      { "at": "2026-09-07T11:12:00Z", "event": "REQUESTED", "actor": "Tomás Rivera" },
+      { "at": "2026-09-12T09:47:00Z", "event": "DECIDED", "actor": "S. Patel" }
+    ]
+  },
+  {
+    "requestId": "ar-20277",
+    "type": "GRANT",
+    "status": "APPROVED",
+    "priority": "NORMAL",
+    "requester": { "name": "Liam Novak", "department": "Legal", "manager": "C. Duval" },
+    "resource": { "name": "Customer PII Reader", "system": "Salesforce-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Contract review requires reading customer contact records for accounts in the Meridian renewal cohort.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-08T10:05:00Z",
+    "dueDate": "2026-09-22",
+    "version": 2,
+    "decision": {
+      "outcome": "APPROVED",
+      "decidedBy": "C. Duval",
+      "decidedAt": "2026-09-10T13:33:00Z",
+      "justification": "Approved for the contract review window; scope is read-only."
+    },
+    "history": [
+      { "at": "2026-09-08T10:05:00Z", "event": "REQUESTED", "actor": "Liam Novak" },
+      { "at": "2026-09-10T13:33:00Z", "event": "DECIDED", "actor": "C. Duval" }
+    ]
+  },
+  {
+    "requestId": "ar-20355",
+    "type": "GRANT",
+    "status": "APPROVED",
+    "priority": "LOW",
+    "requester": { "name": "Jordan Blake", "department": "Finance", "manager": "A. Okafor" },
+    "resource": { "name": "Expense Submission", "system": "NetSuite-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Submitting team expense reports while the team lead is on parental leave.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-09T14:47:00Z",
+    "dueDate": "2026-09-30",
+    "version": 2,
+    "decision": {
+      "outcome": "APPROVED",
+      "decidedBy": "K. Duarte",
+      "decidedAt": "2026-09-13T10:02:00Z",
+      "justification": "Standard coverage approval; submission rights only."
+    },
+    "history": [
+      { "at": "2026-09-09T14:47:00Z", "event": "REQUESTED", "actor": "Jordan Blake" },
+      { "at": "2026-09-13T10:02:00Z", "event": "DECIDED", "actor": "K. Duarte" }
+    ]
+  },
+  {
+    "requestId": "ar-20370",
+    "type": "REVOKE",
+    "status": "APPROVED",
+    "priority": "HIGH",
+    "requester": { "name": "svc-payroll-sync", "department": "IT Operations", "manager": "—" },
+    "resource": { "name": "Repo Administrator", "system": "GitHub-Enterprise", "type": "ROLE" },
+    "requesterJustification": "Offboarding sweep: standing repo-admin grant on the integration account exceeds service-account policy.",
+    "riskFlags": ["PRIVILEGED_ACCESS"],
+    "requestedAt": "2026-09-10T07:30:00Z",
+    "dueDate": "2026-09-24",
+    "version": 2,
+    "decision": {
+      "outcome": "APPROVED",
+      "decidedBy": "T. Ishikawa",
+      "decidedAt": "2026-09-12T15:18:00Z",
+      "justification": "Agreed; service accounts must not hold standing admin. Replaced with a scoped deploy key."
+    },
+    "history": [
+      { "at": "2026-09-10T07:30:00Z", "event": "REQUESTED", "actor": "svc-payroll-sync" },
+      { "at": "2026-09-12T15:18:00Z", "event": "DECIDED", "actor": "T. Ishikawa" }
+    ]
+  },
+  {
+    "requestId": "ar-20388",
+    "type": "GRANT",
+    "status": "APPROVED",
+    "priority": "NORMAL",
+    "requester": { "name": "Grace O'Connell", "department": "Marketing", "manager": "D. Fournier" },
+    "resource": { "name": "Marketing Automation Admin", "system": "HubSpot-Prod", "type": "APPLICATION" },
+    "requesterJustification": "Campaign migration from the legacy tool; need admin to rebuild workflows and re-point tracking domains.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-11T09:05:00Z",
+    "dueDate": "2026-09-25",
+    "version": 2,
+    "decision": {
+      "outcome": "APPROVED",
+      "decidedBy": "D. Fournier",
+      "decidedAt": "2026-09-13T17:26:00Z",
+      "justification": "Approved for the migration; downscope to standard admin after launch."
+    },
+    "history": [
+      { "at": "2026-09-11T09:05:00Z", "event": "REQUESTED", "actor": "Grace O'Connell" },
+      { "at": "2026-09-13T17:26:00Z", "event": "DECIDED", "actor": "D. Fournier" }
+    ]
+  },
+  {
+    "requestId": "ar-20404",
+    "type": "GRANT",
+    "status": "APPROVED",
+    "priority": "NORMAL",
+    "requester": { "name": "Amara Diallo", "department": "Customer Support", "manager": "B. Kowalski" },
+    "resource": { "name": "Incident Commander", "system": "ServiceNow", "type": "ENTITLEMENT" },
+    "requesterJustification": "Joined the on-call rotation this week; cannot open or command major incidents without the role.",
+    "riskFlags": ["NEW_REQUESTER"],
+    "requestedAt": "2026-09-12T08:20:00Z",
+    "dueDate": "2026-09-26",
+    "version": 2,
+    "decision": {
+      "outcome": "APPROVED",
+      "decidedBy": "B. Kowalski",
+      "decidedAt": "2026-09-14T09:14:00Z",
+      "justification": "Confirmed rotation assignment; new-requester flag satisfied by completed on-call training."
+    },
+    "history": [
+      { "at": "2026-09-12T08:20:00Z", "event": "REQUESTED", "actor": "Amara Diallo" },
+      { "at": "2026-09-14T09:14:00Z", "event": "DECIDED", "actor": "B. Kowalski" }
+    ]
+  },
+  {
+    "requestId": "ar-20409",
+    "type": "REVOKE",
+    "status": "DENIED",
+    "priority": "LOW",
+    "requester": { "name": "Compliance Bot", "department": "GRC", "manager": "—" },
+    "resource": { "name": "Customer PII Reader", "system": "Salesforce-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Recertification sweep: flag raised on inactive grant holder.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-10T06:45:00Z",
+    "dueDate": "2026-09-24",
+    "version": 2,
+    "decision": {
+      "outcome": "DENIED",
+      "decidedBy": "M. Smith",
+      "decidedAt": "2026-09-14T11:52:00Z",
+      "justification": "Holder is active and used the entitlement within the last 14 days; recert record is stale. Re-raising after next sync."
+    },
+    "history": [
+      { "at": "2026-09-10T06:45:00Z", "event": "REQUESTED", "actor": "Compliance Bot" },
+      { "at": "2026-09-14T11:52:00Z", "event": "DECIDED", "actor": "M. Smith" }
+    ]
+  },
+  {
+    "requestId": "ar-20415",
+    "type": "GRANT",
+    "status": "DENIED",
+    "priority": "NORMAL",
+    "requester": { "name": "Jordan Blake", "department": "Finance", "manager": "A. Okafor" },
+    "resource": { "name": "Budget Approver", "system": "NetSuite-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Need to approve budget lines for the finance transformation project.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-11T16:30:00Z",
+    "dueDate": "2026-09-25",
+    "version": 2,
+    "decision": {
+      "outcome": "DENIED",
+      "decidedBy": "K. Duarte",
+      "decidedAt": "2026-09-15T09:41:00Z",
+      "justification": "Requester already holds equivalent approval rights via the Finance-Controller role. No additional grant."
+    },
+    "history": [
+      { "at": "2026-09-11T16:30:00Z", "event": "REQUESTED", "actor": "Jordan Blake" },
+      { "at": "2026-09-15T09:41:00Z", "event": "DECIDED", "actor": "K. Duarte" }
+    ]
+  },
+  {
+    "requestId": "ar-20425",
+    "type": "GRANT",
+    "status": "DENIED",
+    "priority": "NORMAL",
+    "requester": { "name": "Marcus Webb", "department": "Engineering", "manager": "T. Ishikawa" },
+    "resource": { "name": "Repo Administrator", "system": "GitHub-Enterprise", "type": "ROLE" },
+    "requesterJustification": "Setting up protected branches and CI rules for the new monorepo.",
+    "riskFlags": ["DORMANT_90D"],
+    "requestedAt": "2026-09-12T13:55:00Z",
+    "dueDate": "2026-09-26",
+    "version": 2,
+    "decision": {
+      "outcome": "DENIED",
+      "decidedBy": "T. Ishikawa",
+      "decidedAt": "2026-09-15T14:10:00Z",
+      "justification": "Account has been dormant for 120 days. Reactivate through your manager first, then resubmit."
+    },
+    "history": [
+      { "at": "2026-09-12T13:55:00Z", "event": "REQUESTED", "actor": "Marcus Webb" },
+      { "at": "2026-09-15T14:10:00Z", "event": "DECIDED", "actor": "T. Ishikawa" }
+    ]
+  },
+  {
+    "requestId": "ar-20436",
+    "type": "GRANT",
+    "status": "DENIED",
+    "priority": "LOW",
+    "requester": { "name": "svc-payroll-sync", "department": "IT Operations", "manager": "—" },
+    "resource": { "name": "Payroll Export", "system": "HRIS", "type": "APPLICATION" },
+    "requesterJustification": "Automated request generated by the payroll sync integration; interactive export bundle requested by connector.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-13T05:10:00Z",
+    "dueDate": "2026-09-27",
+    "version": 2,
+    "decision": {
+      "outcome": "DENIED",
+      "decidedBy": "M. Smith",
+      "decidedAt": "2026-09-16T08:27:00Z",
+      "justification": "Service accounts cannot hold interactive export. Use the scheduled payroll API integration instead."
+    },
+    "history": [
+      { "at": "2026-09-13T05:10:00Z", "event": "REQUESTED", "actor": "svc-payroll-sync" },
+      { "at": "2026-09-16T08:27:00Z", "event": "DECIDED", "actor": "M. Smith" }
+    ]
+  },
+  {
+    "requestId": "ar-20444",
+    "type": "GRANT",
+    "status": "DENIED",
+    "priority": "NORMAL",
+    "requester": { "name": "Nadia Osei", "department": "Operations", "manager": "S. Patel" },
+    "resource": { "name": "Tenant Administrator", "system": "Azure-AD", "type": "ROLE" },
+    "requesterJustification": "Onboarding checklist mentions tenant admin for device enrollment pilots.",
+    "riskFlags": ["NEW_REQUESTER"],
+    "requestedAt": "2026-09-14T10:22:00Z",
+    "dueDate": "2026-09-28",
+    "version": 2,
+    "decision": {
+      "outcome": "DENIED",
+      "decidedBy": "S. Patel",
+      "decidedAt": "2026-09-18T10:05:00Z",
+      "justification": "Requester is in week three of onboarding; privileged tenant roles require six-month tenure per policy SEC-7. Point solution exists for device enrollment."
+    },
+    "history": [
+      { "at": "2026-09-14T10:22:00Z", "event": "REQUESTED", "actor": "Nadia Osei" },
+      { "at": "2026-09-18T10:05:00Z", "event": "DECIDED", "actor": "S. Patel" }
+    ]
+  },
+  {
+    "requestId": "ar-20447",
+    "type": "GRANT",
+    "status": "DENIED",
+    "priority": "NORMAL",
+    "requester": { "name": "Yusuf Ahmed", "department": "Data & Analytics", "manager": "V. Kaur" },
+    "resource": { "name": "Workspace Admin", "system": "Slack-Enterprise", "type": "ENTITLEMENT" },
+    "requesterJustification": "Need to manage channels and integrations for the data platform announcements.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-14T15:03:00Z",
+    "dueDate": "2026-09-28",
+    "version": 2,
+    "decision": {
+      "outcome": "DENIED",
+      "decidedBy": "V. Kaur",
+      "decidedAt": "2026-09-16T12:48:00Z",
+      "justification": "Requester is already in DWH-Analysts, which grants channel-management rights on the affected workspaces."
+    },
+    "history": [
+      { "at": "2026-09-14T15:03:00Z", "event": "REQUESTED", "actor": "Yusuf Ahmed" },
+      { "at": "2026-09-16T12:48:00Z", "event": "DECIDED", "actor": "V. Kaur" }
+    ]
+  },
+  {
+    "requestId": "ar-20452",
+    "type": "GRANT",
+    "status": "DENIED",
+    "priority": "HIGH",
+    "requester": { "name": "Tomás Rivera", "department": "IT Operations", "manager": "S. Patel" },
+    "resource": { "name": "Termination Processor", "system": "HRIS", "type": "ENTITLEMENT" },
+    "requesterJustification": "IT needs to process leaver records directly when HR is offline during maintenance windows.",
+    "riskFlags": ["SOD_CONFLICT"],
+    "sodConflict": {
+      "conflictsWith": "Payroll Export",
+      "policy": "SoD-HR-02 — termination processing and payroll export are incompatible"
+    },
+    "requestedAt": "2026-09-15T09:18:00Z",
+    "dueDate": "2026-09-29",
+    "version": 2,
+    "decision": {
+      "outcome": "DENIED",
+      "decidedBy": "P. Mensah",
+      "decidedAt": "2026-09-16T15:36:00Z",
+      "justification": "SoD conflict with existing Payroll Export grant and no compensating control on file. Termination processing belongs to HR operations."
+    },
+    "history": [
+      { "at": "2026-09-15T09:18:00Z", "event": "REQUESTED", "actor": "Tomás Rivera" },
+      { "at": "2026-09-16T15:36:00Z", "event": "DECIDED", "actor": "P. Mensah" }
+    ]
+  },
+  {
+    "requestId": "ar-20470",
+    "type": "GRANT",
+    "status": "DENIED",
+    "priority": "LOW",
+    "requester": { "name": "Hannah Liu", "department": "Human Resources", "manager": "P. Mensah" },
+    "resource": { "name": "Workspace Admin", "system": "Slack-Enterprise", "type": "ENTITLEMENT" },
+    "requesterJustification": "Setting up the new-hire onboarding channels for the fall cohort.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-15T11:40:00Z",
+    "dueDate": "2026-09-29",
+    "version": 2,
+    "decision": {
+      "outcome": "DENIED",
+      "decidedBy": "P. Mensah",
+      "decidedAt": "2026-09-15T16:12:00Z",
+      "justification": "Admin-scoped role; requester needs member-level only. Resubmit under the Onboarding-Channel-Manager entitlement."
+    },
+    "history": [
+      { "at": "2026-09-15T11:40:00Z", "event": "REQUESTED", "actor": "Hannah Liu" },
+      { "at": "2026-09-15T16:12:00Z", "event": "DECIDED", "actor": "P. Mensah" }
+    ]
+  },
+  {
+    "requestId": "ar-20461",
+    "type": "REVOKE",
+    "status": "DENIED",
+    "priority": "NORMAL",
+    "requester": { "name": "terraform-pipeline" },
+    "resource": { "name": "Workspace Admin", "system": "Slack-Enterprise", "type": "ENTITLEMENT" },
+    "requesterJustification": "Drift remediation: state file lists workspace-admin grant for removal.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-16T04:05:00Z",
+    "dueDate": "2026-09-30",
+    "version": 2,
+    "decision": {
+      "outcome": "DENIED",
+      "decidedBy": "T. Ishikawa",
+      "decidedAt": "2026-09-17T09:02:00Z",
+      "justification": "Target account never held this grant; Terraform state is out of sync. Fix the plan before re-raising."
+    },
+    "history": [
+      { "at": "2026-09-16T04:05:00Z", "event": "REQUESTED", "actor": "terraform-pipeline" },
+      { "at": "2026-09-17T09:02:00Z", "event": "DECIDED", "actor": "T. Ishikawa" }
+    ]
+  },
+  {
+    "requestId": "ar-20485",
+    "type": "GRANT",
+    "status": "CANCELLED",
+    "priority": "NORMAL",
+    "requester": { "name": "Dana Whitfield", "department": "Finance", "manager": "A. Okafor" },
+    "resource": { "name": "Budget Approver", "system": "NetSuite-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Covering budget approvals during the ERP migration.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-12T09:26:00Z",
+    "dueDate": "2026-09-26",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-12T09:26:00Z", "event": "REQUESTED", "actor": "Dana Whitfield" },
+      { "at": "2026-09-14T08:15:00Z", "event": "CANCELLED", "actor": "Dana Whitfield" }
+    ]
+  },
+  {
+    "requestId": "ar-20493",
+    "type": "GRANT",
+    "status": "CANCELLED",
+    "priority": "LOW",
+    "requester": { "name": "Grace O'Connell", "department": "Marketing", "manager": "D. Fournier" },
+    "resource": { "name": "Workspace Admin", "system": "Slack-Enterprise", "type": "ENTITLEMENT" },
+    "requesterJustification": "Needed to create the campaign war-room channel.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-13T10:12:00Z",
+    "dueDate": "2026-09-27",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-13T10:12:00Z", "event": "REQUESTED", "actor": "Grace O'Connell" },
+      { "at": "2026-09-15T14:33:00Z", "event": "CANCELLED", "actor": "D. Fournier" }
+    ]
+  },
+  {
+    "requestId": "ar-20502",
+    "type": "REVOKE",
+    "status": "CANCELLED",
+    "priority": "NORMAL",
+    "requester": { "name": "Compliance Bot", "department": "GRC", "manager": "—" },
+    "resource": { "name": "HR Data Viewer", "system": "HRIS", "type": "ENTITLEMENT" },
+    "requesterJustification": "Recertification sweep: dormant grant flagged for removal.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-17T06:10:00Z",
+    "dueDate": "2026-10-01",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-17T06:10:00Z", "event": "REQUESTED", "actor": "Compliance Bot" },
+      { "at": "2026-09-19T07:05:00Z", "event": "CANCELLED", "actor": "Compliance Bot" }
+    ]
+  },
+  {
+    "requestId": "ar-20521",
+    "type": "GRANT",
+    "status": "CANCELLED",
+    "priority": "HIGH",
+    "requester": { "name": "Elena Sokolova", "department": "Data & Analytics", "manager": "T. Ishikawa" },
+    "resource": { "name": "Tenant Administrator", "system": "Azure-AD", "type": "ROLE" },
+    "requesterJustification": "Urgent: identity provider outage recovery, need tenant admin to restore SSO bindings.",
+    "riskFlags": ["PRIVILEGED_ACCESS"],
+    "requestedAt": "2026-09-15T07:44:00Z",
+    "dueDate": "2026-09-22",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-15T07:44:00Z", "event": "REQUESTED", "actor": "Elena Sokolova" },
+      { "at": "2026-09-15T11:20:00Z", "event": "CANCELLED", "actor": "T. Ishikawa" }
+    ]
+  },
+  {
+    "requestId": "ar-20540",
+    "type": "GRANT",
+    "status": "CANCELLED",
+    "priority": "NORMAL",
+    "requester": { "name": "Amara Diallo", "department": "Customer Support" },
+    "resource": { "name": "Incident Commander", "system": "ServiceNow", "type": "ENTITLEMENT" },
+    "requesterJustification": "Second on-call seat for the APAC coverage expansion.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-16T09:31:00Z",
+    "dueDate": "2026-09-30",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-16T09:31:00Z", "event": "REQUESTED", "actor": "Amara Diallo" },
+      { "at": "2026-09-18T13:07:00Z", "event": "CANCELLED", "actor": "B. Kowalski" }
+    ]
+  },
+  {
+    "requestId": "ar-20554",
+    "type": "GRANT",
+    "status": "CANCELLED",
+    "priority": "NORMAL",
+    "requester": { "name": "Liam Novak", "department": "Legal", "manager": "C. Duval" },
+    "resource": { "name": "Payment Approval", "system": "ERP-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Legal sign-off on vendor payments during the procurement system cutover.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-14T13:02:00Z",
+    "dueDate": "2026-09-28",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-14T13:02:00Z", "event": "REQUESTED", "actor": "Liam Novak" },
+      { "at": "2026-09-16T10:44:00Z", "event": "CANCELLED", "actor": "Liam Novak" }
+    ]
+  },
+  {
+    "requestId": "ar-20471",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "Dana Whitfield", "department": "Finance", "manager": "A. Okafor" },
+    "resource": { "name": "Payment Initiation", "system": "ERP-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Needed to cover quarter-end close while R. Ellis is on leave.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-14T09:12:00Z",
+    "dueDate": "2026-09-28",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-14T09:12:00Z", "event": "REQUESTED", "actor": "Dana Whitfield" }
+    ]
+  },
+  {
+    "requestId": "ar-20518",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "HIGH",
+    "requester": { "name": "Priya Raman", "department": "Finance", "manager": "A. Okafor" },
+    "resource": { "name": "Payment Initiation", "system": "ERP-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Temporary coverage for payment runs during system migration.",
+    "riskFlags": ["SOD_CONFLICT"],
+    "sodConflict": {
+      "conflictsWith": "Payment Approval",
+      "policy": "SoD-PAY-01 — initiation and approval are incompatible"
+    },
+    "requestedAt": "2026-09-19T14:47:00Z",
+    "dueDate": "2026-09-24",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-19T14:47:00Z", "event": "REQUESTED", "actor": "Priya Raman" }
+    ]
+  },
+  {
+    "requestId": "ar-20533",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "LOW",
+    "requester": { "name": "Bea Lindqvist", "department": "Data & Analytics", "manager": "V. Kaur" },
+    "resource": { "name": "DWH Analyst", "system": "Data-Warehouse", "type": "ROLE" },
+    "requesterJustification": "Onboarding to the metrics platform team.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-10T11:28:00Z",
+    "dueDate": "2026-09-18",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-10T11:28:00Z", "event": "REQUESTED", "actor": "Bea Lindqvist" }
+    ]
+  },
+  {
+    "requestId": "ar-20570",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "HIGH",
+    "requester": { "name": "Jordan Blake", "department": "Finance", "manager": "A. Okafor" },
+    "resource": { "name": "Budget Approver", "system": "NetSuite-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Transformation project requires budget-line approvals; previous request was denied as duplicated by Finance-Controller, but that role's approval scope was narrowed last sprint and no longer covers project budget lines.",
+    "riskFlags": ["SOD_CONFLICT"],
+    "sodConflict": {
+      "conflictsWith": "Expense Submission",
+      "policy": "SoD-FIN-03 — budget approval and expense submission are incompatible"
+    },
+    "requestedAt": "2026-09-17T10:14:00Z",
+    "dueDate": "2026-09-23",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-17T10:14:00Z", "event": "REQUESTED", "actor": "Jordan Blake" }
+    ]
+  },
+  {
+    "requestId": "ar-20579",
+    "type": "REVOKE",
+    "status": "PENDING",
+    "priority": "LOW",
+    "requester": { "name": "Compliance Bot", "department": "GRC", "manager": "—" },
+    "resource": { "name": "Tenant Administrator", "system": "Azure-AD", "type": "ROLE" },
+    "requesterJustification": "Offboarding sweep: departed contractor, end date 2026-09-10.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-11T06:22:00Z",
+    "dueDate": "2026-09-25",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-11T06:22:00Z", "event": "REQUESTED", "actor": "Compliance Bot" }
+    ]
+  },
+  {
+    "requestId": "ar-20587",
+    "type": "REVOKE",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "svc-payroll-sync", "department": "IT Operations", "manager": "—" },
+    "resource": { "name": "HR Data Viewer", "system": "HRIS", "type": "ENTITLEMENT" },
+    "requesterJustification": "Recertification sweep: grant unused for 120 days on the shared reporting account.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-19T07:05:00Z",
+    "dueDate": "2026-09-26",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-19T07:05:00Z", "event": "REQUESTED", "actor": "svc-payroll-sync" }
+    ]
+  },
+  {
+    "requestId": "ar-20590",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "Omar Haddad", "department": "Data & Analytics", "manager": "V. Kaur" },
+    "resource": { "name": "DWH Analyst", "system": "Data-Warehouse", "type": "ROLE" },
+    "requesterJustification": "Returning from extended leave; need the analyst role restored.",
+    "riskFlags": ["DORMANT_90D"],
+    "requestedAt": "2026-09-16T08:52:00Z",
+    "dueDate": "2026-09-19",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-16T08:52:00Z", "event": "REQUESTED", "actor": "Omar Haddad" }
+    ]
+  },
+  {
+    "requestId": "ar-20595",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "Liam Novak", "department": "Legal", "manager": "C. Duval" },
+    "resource": { "name": "Customer PII Reader", "system": "Salesforce-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Outside counsel has requested extract-level review of customer contact records relevant to the Meridian v4 contract dispute (matter #CV-2026-1187). Access is required for two document custodians for the duration of the discovery window, estimated six weeks but likely to extend if the motion calendar slips. Review will be conducted under supervised session with access logging enabled, and no records will leave the Sales Cloud environment. Access will be surrendered immediately upon matter closure or counsel sign-off, whichever comes first. I am the single point of contact for the e-discovery vendor and can attest to scope on request.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-15T12:41:00Z",
+    "dueDate": "2026-09-22",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-15T12:41:00Z", "event": "REQUESTED", "actor": "Liam Novak" }
+    ]
+  },
+  {
+    "requestId": "ar-20601",
+    "type": "REVOKE",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "Compliance Bot", "department": "GRC", "manager": "—" },
+    "resource": { "name": "Payroll Export", "system": "HRIS", "type": "APPLICATION" },
+    "requesterJustification": "Quarterly recertification: holder on extended unpaid leave; grant inactive since 2026-07-01.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-17T06:00:00Z",
+    "dueDate": "2026-10-01",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-17T06:00:00Z", "event": "REQUESTED", "actor": "Compliance Bot" }
+    ]
+  },
+  {
+    "requestId": "ar-20612",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "LOW",
+    "requester": { "name": "Grace O'Connell", "department": "Marketing", "manager": "D. Fournier" },
+    "resource": { "name": "DWH Analyst", "system": "Data-Warehouse", "type": "ROLE" },
+    "riskFlags": [],
+    "requestedAt": "2026-09-15T15:09:00Z",
+    "dueDate": "2026-10-01",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-15T15:09:00Z", "event": "REQUESTED", "actor": "Grace O'Connell" }
+    ]
+  },
+  {
+    "requestId": "ar-20622",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "Amara Diallo", "department": "Customer Support", "manager": "B. Kowalski" },
+    "resource": { "name": "Incident Commander", "system": "ServiceNow", "type": "ENTITLEMENT" },
+    "requesterJustification": "APAC rotation seat two; see approved request ar-20404 for training record.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-18T09:47:00Z",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-18T09:47:00Z", "event": "REQUESTED", "actor": "Amara Diallo" }
+    ]
+  },
+  {
+    "requestId": "ar-20630",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "Tomás Rivera", "department": "IT Operations", "manager": "S. Patel" },
+    "resource": { "name": "Workspace Admin", "system": "Slack-Enterprise", "type": "ENTITLEMENT" },
+    "requesterJustification": "Incident channel administration during the migration freeze; my previous grant lapsed while I was rotated off-call.",
+    "riskFlags": ["DORMANT_90D"],
+    "requestedAt": "2026-09-08T10:31:00Z",
+    "dueDate": "2026-09-15",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-08T10:31:00Z", "event": "REQUESTED", "actor": "Tomás Rivera" }
+    ]
+  },
+  {
+    "requestId": "ar-20640",
+    "type": "REVOKE",
+    "status": "PENDING",
+    "priority": "HIGH",
+    "requester": { "name": "terraform-pipeline" },
+    "resource": { "name": "Repo Administrator", "system": "GitHub-Enterprise", "type": "ROLE" },
+    "requesterJustification": "Drift remediation: pipeline service account holds standing repo-admin granted manually in August; replacing with scoped deploy key per SDLC-12.",
+    "riskFlags": ["PRIVILEGED_ACCESS"],
+    "requestedAt": "2026-09-17T04:31:00Z",
+    "dueDate": "2026-09-26",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-17T04:31:00Z", "event": "REQUESTED", "actor": "terraform-pipeline" }
+    ]
+  },
+  {
+    "requestId": "ar-20647",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "Hannah Liu", "department": "Human Resources", "manager": "P. Mensah" },
+    "resource": { "name": "Termination Processor", "system": "HRIS", "type": "ENTITLEMENT" },
+    "requesterJustification": "HR operations onboarding; will process leaver records under supervision for the first 30 days.",
+    "requestedAt": "2026-09-18T11:16:00Z",
+    "dueDate": "2026-10-02",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-18T11:16:00Z", "event": "REQUESTED", "actor": "Hannah Liu" }
+    ]
+  },
+  {
+    "requestId": "ar-20650",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "LOW",
+    "requester": { "name": "Marcus Webb", "department": "Engineering", "manager": "T. Ishikawa" },
+    "resource": { "name": "Prod Deployment Approver", "system": "AWS-Provisioning", "type": "ENTITLEMENT" },
+    "requesterJustification": "Secondary approver for the platform team's release train.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-18T14:52:00Z",
+    "dueDate": "2026-10-02",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-18T14:52:00Z", "event": "REQUESTED", "actor": "Marcus Webb" }
+    ]
+  },
+  {
+    "requestId": "ar-20660",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "HIGH",
+    "requester": { "name": "Priya Raman", "department": "Finance", "manager": "A. Okafor" },
+    "resource": { "name": "Payment Approval", "system": "ERP-Prod", "type": "ENTITLEMENT" },
+    "requesterJustification": "Approving vendor payment batches during the ERP cutover; the usual approvers are out in the same window as my initiation coverage.",
+    "riskFlags": ["SOD_CONFLICT"],
+    "sodConflict": {
+      "conflictsWith": "Payment Initiation",
+      "policy": "SoD-PAY-01 — initiation and approval are incompatible"
+    },
+    "requestedAt": "2026-09-20T09:03:00Z",
+    "dueDate": "2026-09-27",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-20T09:03:00Z", "event": "REQUESTED", "actor": "Priya Raman" }
+    ]
+  },
+  {
+    "requestId": "ar-20666",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "Hannah Liu", "department": "Human Resources", "manager": "P. Mensah" },
+    "resource": { "name": "HR Data Viewer", "system": "HRIS", "type": "ENTITLEMENT" },
+    "requesterJustification": "Benefits open-enrollment support starts next week; need read access to run the enrollment exception report.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-20T13:38:00Z",
+    "dueDate": "2026-10-04",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-20T13:38:00Z", "event": "REQUESTED", "actor": "Hannah Liu" }
+    ]
+  },
+  {
+    "requestId": "ar-20672",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "Tomás Rivera", "department": "IT Operations", "manager": "S. Patel" },
+    "resource": { "name": "Termination Processor", "system": "HRIS", "type": "ENTITLEMENT" },
+    "requesterJustification": "Resubmission of ar-20452 with compensating control: Payroll Export grant surrendered as of 2026-09-19, and HR VP co-sponsor attached per P. Mensah. Termination backlogs must clear before the audit freeze on 2026-10-01.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-20T15:27:00Z",
+    "dueDate": "2026-10-04",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-20T15:27:00Z", "event": "REQUESTED", "actor": "Tomás Rivera" }
+    ]
+  },
+  {
+    "requestId": "ar-20675",
+    "type": "REVOKE",
+    "status": "PENDING",
+    "priority": "LOW",
+    "requester": { "name": "Nadia Osei", "department": "Operations", "manager": "S. Patel" },
+    "resource": { "name": "Workspace Admin", "system": "Slack-Enterprise", "type": "ENTITLEMENT" },
+    "requesterJustification": "Cleanup: inherited workspace admin from a project that ended in August.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-20T17:55:00Z",
+    "dueDate": "2026-10-04",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-20T17:55:00Z", "event": "REQUESTED", "actor": "Nadia Osei" }
+    ]
+  },
+  {
+    "requestId": "ar-20680",
+    "type": "GRANT",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "requester": { "name": "Dana Whitfield", "department": "Finance", "manager": "A. Okafor" },
+    "resource": { "name": "Payroll Export", "system": "HRIS", "type": "APPLICATION" },
+    "requesterJustification": "Quarter-end reconciliation requires pulling payroll actuals into the finance workbook.",
+    "riskFlags": [],
+    "requestedAt": "2026-09-21T08:04:00Z",
+    "dueDate": "2026-10-05",
+    "version": 1,
+    "decision": null,
+    "history": [
+      { "at": "2026-09-21T08:04:00Z", "event": "REQUESTED", "actor": "Dana Whitfield" }
+    ]
+  }
+]
