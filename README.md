@@ -2,6 +2,8 @@
 
 This repository contains a TypeScript/Jest API test suite for the supplied access-request service. The service is deliberately run outside the test runner: it keeps the suite useful against another build without coupling test execution to a particular process manager.
 
+AI-assisted contributors should also read [`AGENTS.md`](AGENTS.md) for the project runbook, safety guardrails, and result-interpretation guidance.
+
 ## Run the suite
 
 Prerequisite: Node 18+ and npm. Install dependencies once with `npm ci`.
@@ -80,6 +82,12 @@ reports/runs/<UTC-timestamp>/index.html
 
 `results.json` has a normalized test name, layer, status, duration, and failure evidence only for failed tests—successful response payloads are intentionally omitted. `index.html` is a self-contained browser dashboard grouped into collapsible test layers, with search, status filtering, and expandable failure evidence. Metadata records the UTC timestamp, effective base URL, Node version, and Git revision (or `null` outside a Git checkout).
 
+### Sample report dashboard
+
+The dashboard below is an example layout only; test totals and failures change with the target build and each run.
+
+![Example API test report dashboard](docs/report-dashboard-example.png)
+
 ## 10-minute mini-regression
 
 For a hotfix build, I would run these ten named checks first. They cover availability, list correctness, validation, state safety, and bulk semantics with minimal duplication.
@@ -99,6 +107,6 @@ Run them with `npm run test:regression`. One parameterized whitespace-justificat
 
 ## With one more day
 
-I would add a small CI job that starts the service and uploads the three artifacts; property-style coverage for filter/sort/pagination combinations; malformed JSON and content-type cases; deterministic contract snapshots for error envelopes; and a parallel-isolation option that gives each worker its own service instance.
+I would add property-style coverage for filter/sort/pagination combinations; malformed JSON and content-type cases; deterministic contract snapshots for error envelopes; a parallel-isolation option that gives each worker its own service instance; and CI execution verification after the repository is pushed to GitHub.
 
 See [DEFECT_REPORT.md](DEFECT_REPORT.md) for the confirmed deviations from the specification.
